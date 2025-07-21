@@ -157,3 +157,4 @@ if __name__ == "__main__":
     matrix = readmtk('input.mtk')
     h = readh('input.h')
     Astar(matrix, h, 0, 10)
+    print()
