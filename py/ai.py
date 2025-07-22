@@ -121,6 +121,33 @@ def AT(matrix, h, start, stop):
         Open.sort(key=lambda x: g[x])
     print("dell co duong di")
 
+def CMS(matrix, h, start, stop):
+    Close = []
+    Open = [start]
+    parent = [-1] * len(matrix)
+    g = [0] * len(matrix)
+    g[start] = h[start]
+    while Open:
+        cur_node = Open.pop(0)
+        if cur_node == stop:
+            printPath(parent, stop)
+            return
+        Close.append(cur_node)
+        Tn = []
+        for next_node in range(len(matrix)):
+            if matrix[cur_node][next_node] > 0 and next_node not in Open and next_node not in Close:
+                g[next_node] = g[cur_node] + h[next_node]
+                parent[next_node] = cur_node
+                Tn.append(next_node)
+            elif matrix[cur_node][next_node] > 0 and next_node in Open:
+                g_new = g[cur_node] + h[next_node]
+                if g_new < g[next_node]:
+                    g[next_node] = g_new
+                    parent[next_node] = cur_node
+        Open = Tn + Open
+        Open.sort(key=lambda x: g[x])
+    print("Dell co duong di")
+
 def Astar(matrix, h, start, stop):
     Close = []
     Open = [start]
@@ -139,21 +166,22 @@ def Astar(matrix, h, start, stop):
         for next_node in range(len(matrix)):
             if matrix[cur_node][next_node] > 0 and next_node not in Open and next_node not in Close:
                 g[next_node] = g[cur_node] + matrix[cur_node][next_node]
-                f[next_node] = g[next_node] + h[next_node]
+                f[next_node]  = g[next_node] + h[next_node]
                 parent[next_node] = cur_node
                 Tn.append(next_node)
             elif matrix[cur_node][next_node] > 0 and (next_node in Open or next_node in Close):
                 g_new = g[cur_node] + matrix[cur_node][next_node]
-                f_new = g[next_node] + h[next_node]
+                f_new = g_new + h[next_node]
                 if f_new < f[next_node]:
                     g[next_node] = g_new
                     f[next_node] = f_new
                     parent[next_node] = cur_node
         Open = Tn + Open
         Open.sort(key=lambda x: f[x])
-    print("dell co duong di")
+    print("Dell co duong di")
 
 if __name__ == "__main__":
     matrix = readmtk('input.mtk')
     h = readh('input.h')
-    Astar(matrix, h, 0, 10)
+    CMS(matrix, h, 0, 7)
+    print()
