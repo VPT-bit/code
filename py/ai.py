@@ -21,9 +21,9 @@ def printPath(parent, stop):
     path.reverse()
     for i in range(len(path)):
         if i == len(path) - 1:
-            print(path[i], end='')
+            print(chr(path[i] + 65), end='')
         else:
-            print(path[i], end=' -> ')
+            print(chr(path[i] + 65), end=' -> ')
 
 def BFS(matrix, start, stop):
     Close = []
