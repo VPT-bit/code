@@ -1,0 +1,14 @@
+D:\code\csharp\BTStack\bin\Debug\net9.0\BTStack.exe
+D:\code\csharp\BTStack\bin\Debug\net9.0\BTStack.deps.json
+D:\code\csharp\BTStack\bin\Debug\net9.0\BTStack.runtimeconfig.json
+D:\code\csharp\BTStack\bin\Debug\net9.0\BTStack.dll
+D:\code\csharp\BTStack\bin\Debug\net9.0\BTStack.pdb
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.AssemblyInfoInputs.cache
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.AssemblyInfo.cs
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.csproj.CoreCompileInputs.cache
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.dll
+D:\code\csharp\BTStack\obj\Debug\net9.0\refint\BTStack.dll
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.pdb
+D:\code\csharp\BTStack\obj\Debug\net9.0\BTStack.genruntimeconfig.cache
+D:\code\csharp\BTStack\obj\Debug\net9.0\ref\BTStack.dll

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-light px-2 rounded-bottom-3 fixed-top">
+        <span class="navbar-brand"><i class="bi bi-house fs-2"></i></span>
+        <span class="navbar-brand-text fs-3 fw-bold">HOME</span>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" id="button_active_menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" data-bs-parent="button_active_menu" id="menu">
+            <ul class="navbar-nav ms-auto nav-underline">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link text-black">LINK 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-black">LINK 2</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#main_menu" id="btn_main_menu">MAIN</button>
+                </li>
+                <li class="nav-item">
+                    <a href="html/login.html" class="btn btn-dark">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="collapse p-5" id="main_menu" data-bs-parent="#btn_main_menu">
+        <div class="p-5 bg-gradient rounded-5">
+            <div class="row text-light">
+            <div class="col-lg-4 d-inline-flex justify-content-center align-content-center">
+                <span class="bi bi-house"></span>
+                <p class="px-3">Partition 1</p>
+            </div>
+            <div class="col-lg-4 d-inline-flex justify-content-center align-content-center">
+                <span class="bi bi-house"></span>
+                <p class="px-3">Partition 2</p>
+            </div>
+            <div class="col-lg-4 d-inline-flex justify-content-center align-content-center">
+                <span class="bi bi-house"></span>
+                <p class="px-3">Partition 3</p>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

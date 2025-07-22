@@ -1,0 +1,16 @@
+D:\code\csharp\bai5.2\bin\Debug\net9.0-windows\bai5.2.exe
+D:\code\csharp\bai5.2\bin\Debug\net9.0-windows\bai5.2.deps.json
+D:\code\csharp\bai5.2\bin\Debug\net9.0-windows\bai5.2.runtimeconfig.json
+D:\code\csharp\bai5.2\bin\Debug\net9.0-windows\bai5.2.dll
+D:\code\csharp\bai5.2\bin\Debug\net9.0-windows\bai5.2.pdb
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5._2.Form1.resources
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.csproj.GenerateResource.cache
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.AssemblyInfoInputs.cache
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.AssemblyInfo.cs
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.csproj.CoreCompileInputs.cache
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.dll
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\refint\bai5.2.dll
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.pdb
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\bai5.2.genruntimeconfig.cache
+D:\code\csharp\bai5.2\obj\Debug\net9.0-windows\ref\bai5.2.dll

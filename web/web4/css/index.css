@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+#container{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+main h1{
+    font-size: 4rem;
+    text-align: start;
+}
+.img_container{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#cre_title{
+    color: #B76317;
+}
+#cre_bg{
+    background-color: #E5D7D1;
+}

@@ -1,0 +1,16 @@
+D:\code\csharp\bai5.4\bin\Debug\net9.0-windows\bai5.4.exe
+D:\code\csharp\bai5.4\bin\Debug\net9.0-windows\bai5.4.deps.json
+D:\code\csharp\bai5.4\bin\Debug\net9.0-windows\bai5.4.runtimeconfig.json
+D:\code\csharp\bai5.4\bin\Debug\net9.0-windows\bai5.4.dll
+D:\code\csharp\bai5.4\bin\Debug\net9.0-windows\bai5.4.pdb
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5._4.Form1.resources
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.csproj.GenerateResource.cache
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.AssemblyInfoInputs.cache
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.AssemblyInfo.cs
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.csproj.CoreCompileInputs.cache
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.dll
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\refint\bai5.4.dll
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.pdb
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\bai5.4.genruntimeconfig.cache
+D:\code\csharp\bai5.4\obj\Debug\net9.0-windows\ref\bai5.4.dll
