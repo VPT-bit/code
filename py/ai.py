@@ -103,7 +103,7 @@ def AT(matrix, h, start, stop):
     Close = []
     Open = [start]
     parent = [-1] * len(matrix)
-    g = [0] * len(matrix)
+    g = [float('inf')] * len(matrix)
     g[start] = h[start]
     while Open:
         cur_node = Open.pop(0)
@@ -125,7 +125,7 @@ def CMS(matrix, h, start, stop):
     Close = []
     Open = [start]
     parent = [-1] * len(matrix)
-    g = [0] * len(matrix)
+    g = [float('inf')] * len(matrix)
     g[start] = h[start]
     while Open:
         cur_node = Open.pop(0)
@@ -135,15 +135,16 @@ def CMS(matrix, h, start, stop):
         Close.append(cur_node)
         Tn = []
         for next_node in range(len(matrix)):
-            if matrix[cur_node][next_node] > 0 and next_node not in Open and next_node not in Close:
-                g[next_node] = g[cur_node] + h[next_node]
-                parent[next_node] = cur_node
-                Tn.append(next_node)
-            elif matrix[cur_node][next_node] > 0 and next_node in Open:
-                g_new = g[cur_node] + h[next_node]
-                if g_new < g[next_node]:
-                    g[next_node] = g_new
+            if matrix[cur_node][next_node] > 0:
+                if next_node not in Open and next_node not in Close:
+                    g[next_node] = g[cur_node] + h[next_node]
                     parent[next_node] = cur_node
+                    Tn.append(next_node)
+                elif next_node in Open:
+                    g_new = g[cur_node] + h[next_node]
+                    if g_new < g[next_node]:
+                        g[next_node] = g_new
+                        parent[next_node] = cur_node
         Open = Tn + Open
         Open.sort(key=lambda x: g[x])
     print("Dell co duong di")
@@ -152,9 +153,9 @@ def Astar(matrix, h, start, stop):
     Close = []
     Open = [start]
     parent = [-1] * len(matrix)
-    g = [0] * len(matrix)
+    g = [float('inf')] * len(matrix)
     g[start] = 0
-    f = [0] * len(matrix)
+    f = [float('inf')] * len(matrix)
     f[start] = g[start] + h[start]
     while Open:
         cur_node = Open.pop(0)
@@ -185,13 +186,15 @@ def Branch_and_Bound(matrix, h, start, stop):
     Close = []
     Open = [start]
     parent = [-1] * len(matrix)
-    g = [0] * len(matrix)
-    f = [0] * len(matrix)
+    g = [float('inf')] * len(matrix)
+    g[start] = 0
+    f = [float('inf')] * len(matrix)
     f[start] = g[start] + h[start]
     min = float('inf')
     found = False
     while Open:
         cur_node = Open.pop(0)
+        Close.append(cur_node)
         if cur_node == stop:
             found = True
             # cap nhat lai min
@@ -202,7 +205,6 @@ def Branch_and_Bound(matrix, h, start, stop):
             # bo con
             continue
         elif f[cur_node] < min:
-            Close.append(cur_node)
             Tn = []
             for next_node in range(len(matrix)):
                 if matrix[cur_node][next_node] > 0:
@@ -214,9 +216,13 @@ def Branch_and_Bound(matrix, h, start, stop):
                         Tn.append(next_node)
                     # next_node KHONG thuoc Open, thuoc Close
                     elif next_node not in Open and next_node in Close:
-                        g[next_node] = g[cur_node] + matrix[cur_node][next_node]
-                        f[next_node] = g[next_node] + h[next_node]
-                        Tn.append(next_node)
+                        g_new = g[cur_node] + matrix[cur_node][next_node]
+                        f_new = g_new + h[next_node]
+                        if f_new < f[next_node]:
+                            g[next_node] = g_new
+                            f[next_node] = f_new
+                            parent[next_node] = cur_node
+                            Tn.append(next_node)
                     # next_node thuoc Open, KHONG thuoc Close
                     elif next_node in Open and next_node not in Close:
                         g_new = g[cur_node] + matrix[cur_node][next_node]
@@ -225,19 +231,20 @@ def Branch_and_Bound(matrix, h, start, stop):
                             g[next_node] = g_new
                             f[next_node] = f_new
                             parent[next_node] = cur_node
-                    # next_node thuoc Open, KHONG thuoc Close
+                    # next_node thuoc Open, thuoc Close
                     elif next_node in Open and next_node not in Close:
                         g_new = g[cur_node] + matrix[cur_node][next_node]
                         f_new = g_new + h[next_node]
                         if f_new < f[next_node]:
                             g[next_node] = g_new
                             f[next_node] = f_new
+                            parent[next_node] = cur_node
             Tn.sort(key=lambda x: f[x])
             Open = Tn + Open
     if found:
         printPath(parent, stop)
         print()
-        print("min = ", min)
+        print("min =", min)
     else:
         print("Dell tim thay duong di")
 
