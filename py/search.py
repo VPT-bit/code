@@ -240,4 +240,4 @@ if __name__ == "__main__":
     matrix = readmtk('input.mtk')
     h = readh('input.h')
     Branch_and_Bound(matrix, h, 0, 1)
-    print()
+    print(",")
