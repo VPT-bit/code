@@ -197,24 +197,20 @@ def Branch_and_Bound(matrix, h, start, stop):
         Close.append(cur_node)
         if cur_node == stop:
             found = True
-            # cap nhat lai min
             if f[cur_node] < min:
                 min = f[cur_node]
-                continue
         elif f[cur_node] > min:
-            # bo con
             continue
         elif f[cur_node] < min:
             Tn = []
             for next_node in range(len(matrix)):
                 if matrix[cur_node][next_node] > 0:
-                    # next_node KHONG thuoc Open, KHONG thuoc Close
+                    # KHONG thuoc Open, KHONG thuoc Close
                     if next_node not in Open and next_node not in Close:
                         g[next_node] = g[cur_node] + matrix[cur_node][next_node]
                         f[next_node] = g[next_node] + h[next_node]
                         parent[next_node] = cur_node
                         Tn.append(next_node)
-                    # next_node KHONG thuoc Open, thuoc Close
                     elif next_node not in Open and next_node in Close:
                         g_new = g[cur_node] + matrix[cur_node][next_node]
                         f_new = g_new + h[next_node]
@@ -223,16 +219,7 @@ def Branch_and_Bound(matrix, h, start, stop):
                             f[next_node] = f_new
                             parent[next_node] = cur_node
                             Tn.append(next_node)
-                    # next_node thuoc Open, KHONG thuoc Close
-                    elif next_node in Open and next_node not in Close:
-                        g_new = g[cur_node] + matrix[cur_node][next_node]
-                        f_new = g_new + h[next_node]
-                        if f_new < f[next_node]:
-                            g[next_node] = g_new
-                            f[next_node] = f_new
-                            parent[next_node] = cur_node
-                    # next_node thuoc Open, thuoc Close
-                    elif next_node in Open and next_node not in Close:
+                    elif next_node in Open:
                         g_new = g[cur_node] + matrix[cur_node][next_node]
                         f_new = g_new + h[next_node]
                         if f_new < f[next_node]:
@@ -243,14 +230,12 @@ def Branch_and_Bound(matrix, h, start, stop):
             Open = Tn + Open
     if found:
         printPath(parent, stop)
-        print()
-        print("min =", min)
+        print(f'\nmin = {min}')
     else:
         print("Dell tim thay duong di")
-
-
+        
 if __name__ == "__main__":
     matrix = readmtk('input.mtk')
     h = readh('input.h')
-    Branch_and_Bound(matrix, h, 0, 7)
+    Branch_and_Bound(matrix, h, 0, 1)
     print()
