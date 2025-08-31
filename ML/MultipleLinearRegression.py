@@ -31,6 +31,7 @@ class LinearRegression():
         if iterations: self.iterations = iterations
 
     def parameters(self):
+        "tra ve cac tham so cua mo hinh"
         return self.weight, self.bias, self.learning_rate, self.iterations, self.cost_history
     
     def fit(self,
