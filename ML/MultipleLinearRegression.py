@@ -72,7 +72,7 @@ class LinearRegression():
         plt.show()
 
 if __name__ == "__main__":
-    X_train, y_train = load_data("data.txt")
+    X_train, y_train = load_data("data/data_MLG.txt")
     model = LinearRegression()
     model.config_parameters(iterations=2000)
     model.fit(X_train, y_train)
